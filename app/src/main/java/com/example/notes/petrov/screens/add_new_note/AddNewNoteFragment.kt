@@ -43,7 +43,7 @@ class AddNewNoteFragment : Fragment() {
             } else {
                 mViewModel.insert(AppNote(name = name,text = text)){
          //колбэк по успешной вставки заметки
-                    APP_ACTIVITY.mNavController.navigate(R.id.action_addNewNoteFragment_to_mainFragment)
+                    APP_ACTIVITY.navController.navigate(R.id.action_addNewNoteFragment_to_mainFragment)
                 }
             }
         }

@@ -18,6 +18,17 @@ class MainAdapter:RecyclerView.Adapter<MainAdapter.MainHolder>() {
         val textNote:TextView = view.item_note_text
     }
 
+    override fun onViewAttachedToWindow(holder: MainHolder) {
+        holder.itemView.setOnClickListener{
+            MainFragment.click(mListNotes[holder.adapterPosition])
+        }
+    }
+
+    override fun onViewDetachedFromWindow(holder: MainHolder) {//функция отрабатывает, котгда холдер уходит с экрана
+        holder.itemView.setOnClickListener(null)//удаление слушателя события
+        super.onViewDetachedFromWindow(holder)
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainHolder {//создание холдера в котором будут храниться все вьюшки
         val view = LayoutInflater.from(parent.context).inflate(R.layout.note_item,parent,false)
         return MainHolder(view)
