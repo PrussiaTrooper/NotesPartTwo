@@ -2,7 +2,12 @@ package com.example.notes.petrov.utilits
 
 import com.example.notes.petrov.MainActivity
 import com.example.notes.petrov.database.DatabaseRepository
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
 
+lateinit var AUTH:FirebaseAuth
+lateinit var CURRENT_ID:String
+lateinit var REF_DATABASE:DatabaseReference
 lateinit var APP_ACTIVITY:MainActivity
 lateinit var REPOSITORY:DatabaseRepository
 const val TYPE_DATABASE = "type_database"

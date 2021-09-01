@@ -7,5 +7,8 @@ import com.example.notes.petrov.utilits.REPOSITORY
 class MainFragmentViewModel(application: Application):AndroidViewModel(application) {
 
     val allNotes = REPOSITORY.allNotes //получаем allNotes, а возвращаещает liveData
+    fun signOut(){
+        REPOSITORY.singOut()
+    }
 
 }
