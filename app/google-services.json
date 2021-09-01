@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "605173548234",
+    "firebase_url": "https://siplenotes-default-rtdb.firebaseio.com",
+    "project_id": "siplenotes",
+    "storage_bucket": "siplenotes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605173548234:android:397df2094332fd54062033",
+        "android_client_info": {
+          "package_name": "com.example.notes.petrov"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "605173548234-tpgkrd4a9dhskne5qtav78cjqlln06k5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDk_wjZVQsiH2GJUdkqw_qeZRcpQLqTxhI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "605173548234-tpgkrd4a9dhskne5qtav78cjqlln06k5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
