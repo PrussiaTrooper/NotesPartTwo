@@ -10,6 +10,7 @@ import com.example.notes.petrov.R
 import com.example.notes.petrov.databinding.FragmentMainBinding
 import com.example.notes.petrov.models.AppNote
 import com.example.notes.petrov.utilits.APP_ACTIVITY
+import com.example.notes.petrov.utilits.AppPreference
 
 
 class MainFragment : Fragment() {
@@ -73,6 +74,7 @@ class MainFragment : Fragment() {
         when(item.itemId){
             R.id.btn_exit -> {
                 mViewModel.signOut()
+                AppPreference.setInitUser(false)
                     APP_ACTIVITY.navController.navigate(R.id.action_mainFragment_to_startFragment)
             }
         }
