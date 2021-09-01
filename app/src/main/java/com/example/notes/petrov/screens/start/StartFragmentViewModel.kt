@@ -3,6 +3,7 @@ package com.example.notes.petrov.screens.start
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
+import com.example.notes.petrov.database.firebase.AppFirebaseRepository
 import com.example.notes.petrov.database.room.AppRoomDatabase
 import com.example.notes.petrov.database.room.AppRoomRepository
 import com.example.notes.petrov.utilits.REPOSITORY
@@ -22,7 +23,8 @@ class StartFragmentViewModel(application: Application):AndroidViewModel(applicat
             }
 
             TYPE_FIREBASE ->{
-                showToast(TYPE_FIREBASE)
+                REPOSITORY = AppFirebaseRepository()
+                REPOSITORY.connectToDatabase({onSuccess()},{ showToast(it)})
             }
         }
     }

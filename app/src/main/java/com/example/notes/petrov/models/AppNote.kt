@@ -3,6 +3,7 @@ package com.example.notes.petrov.models
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.example.notes.petrov.database.firebase.AppFirebaseRepository
 import java.io.Serializable
 
 
@@ -10,5 +11,6 @@ import java.io.Serializable
 data class AppNote(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     @ColumnInfo val name: String = "",
-    @ColumnInfo val text: String = ""
+    @ColumnInfo val text: String = "",
+    val idFirebase: String = ""
 ):Serializable //теперь AppNote может поддерживать интерфейс Serializable
